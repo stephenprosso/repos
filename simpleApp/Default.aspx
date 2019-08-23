@@ -2,13 +2,17 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+ <button onclick="myFunction()">Click me</button>
+ <button id="Dash1Butt" Name="" onclick="myFunction2()">Click me</button>
 
-    <div class="row">
-        <button onclick="change"></button>
-    </div>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+    document.getElementById("Dash1Butt").name = "Taco Truck";
+
+
+}
+</script>
 </asp:Content>
