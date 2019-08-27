@@ -15,9 +15,18 @@
         }
     </script>
 
-    <dx:ASPxGridView ID="ASPxGridView1" runat="server"></dx:ASPxGridView>
   
+    <div class="row">
 
+    <dx:ASPxGridView ID="HeaderGridview" runat="server"></dx:ASPxGridView>
 
+    </div>
+        <div class="row">
+            <dx:ASPxGridView ID="DetailGridview" runat="server"></dx:ASPxGridView>
+
+    </div>    <div class="row">
+
+        <dx:ASPxGridView ID="AllocationDetailGridview" runat="server"></dx:ASPxGridView>
+    </div>
 
 </asp:Content>

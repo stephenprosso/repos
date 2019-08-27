@@ -13,12 +13,30 @@ namespace simpleApp {
     public partial class _Default {
         
         /// <summary>
-        /// ASPxGridView1 control.
+        /// HeaderGridview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
+        protected global::DevExpress.Web.ASPxGridView HeaderGridview;
+        
+        /// <summary>
+        /// DetailGridview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView DetailGridview;
+        
+        /// <summary>
+        /// AllocationDetailGridview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView AllocationDetailGridview;
     }
 }
