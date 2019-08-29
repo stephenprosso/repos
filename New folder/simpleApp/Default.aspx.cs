@@ -15,28 +15,81 @@ namespace simpleApp
 
         }
 
-        protected void productsGrid_BeforePerformDataSelect(object sender, EventArgs e)
+        //protected void DetailGridview_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
+        //{
+        //    DetailDS.SelectParameters["Order_Number"].DefaultValue = FocusedContainerID();
+        //    DetailGridview.DataBind();
+        //    AllocationDetailGridview.FocusedRowIndex = -1;
+        //    AllocationDetailGridview.DataBind();
+        //}
+
+        //private string FocusedContainerID()
+        //{
+        //    if (HeaderGridview.VisibleRowCount > 0 && HeaderGridview.FocusedRowIndex > -1)
+        //    {
+        //        return HeaderGridview.GetRowValues(HeaderGridview.FocusedRowIndex, "Order_Number").ToString();
+        //    }
+        //    else
+        //    {
+        //        return "";
+        //    }
+        //}
+        //private string FocusedContainerDetailID()
+        //{
+        //    if (DetailGridview.VisibleRowCount > 0 && DetailGridview.FocusedRowIndex > -1)
+        //    {
+        //        return DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, "Container_ID").ToString();
+        //    }
+        //    else
+        //    {
+        //        return "";
+        //    }
+        //}
+
+        //private string FocusedDetailOrderNumber()
+        //{
+        //    if (DetailGridview.VisibleRowCount > 0 && DetailGridview.FocusedRowIndex > -1)
+        //    {
+        //        return DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, "Order_Number").ToString();
+        //    }
+        //    else
+        //    {
+        //        return "";
+        //    }
+        //}
+
+        //protected void AllocationDetailGridview_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
+        //{
+        //    AllocationDetailDS.SelectParameters["Container_ID"].DefaultValue = FocusedContainerDetailID();
+        //    AllocationDetailDS.SelectParameters["Order_Number"].DefaultValue = FocusedDetailOrderNumber();
+
+        //    AllocationDetailGridview.DataBind();
+        //}
+
+        protected void DetailGrid_BeforePerformDataSelect(object sender, EventArgs e)
         {
-            Session["SupplierID"] = HeaderGridview.GetRowValues(HeaderGridview.FocusedRowIndex, HeaderGridview.KeyFieldName);
+            Session["Order_Number"] = HeaderGridview.GetRowValues(HeaderGridview.FocusedRowIndex, HeaderGridview.KeyFieldName);
         }
-        protected void orderItemsGrid_BeforePerformDataSelect(object sender, EventArgs e)
+
+        //how can I pass a second session to the data source
+        protected void AllocationGrid_BeforePerformDataSelect(object sender, EventArgs e)
         {
-            Session["ProductID"] = DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, DetailGridview.KeyFieldName);
+            Session["Container_ID"] = DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, DetailGridview.KeyFieldName);
         }
 
         protected void DetailGridview_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
-            object masterKeyValue = Convert.ToInt32(e.Parameters);
+            object masterKeyValue = Convert.ToString(e.Parameters);
             ASPxGridView gv = sender as ASPxGridView;
-            Session["SupplierID"] = masterKeyValue;
+            Session["Order_Number"] = masterKeyValue;
             gv.DataBind();
         }
 
         protected void AllocationDetailGridview_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
         {
-            object masterKeyValue = Convert.ToInt32(e.Parameters);
+            object masterKeyValue = Convert.ToString(e.Parameters);
             ASPxGridView gv = sender as ASPxGridView;
-            Session["ProductID"] = masterKeyValue;
+            Session["Container_ID"] = masterKeyValue;
             gv.DataBind();
         }
     }

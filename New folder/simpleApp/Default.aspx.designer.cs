@@ -22,13 +22,13 @@ namespace simpleApp {
         protected global::DevExpress.Web.ASPxGridView HeaderGridview;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// HeaderDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource HeaderDS;
         
         /// <summary>
         /// DetailGridview control.
@@ -40,13 +40,13 @@ namespace simpleApp {
         protected global::DevExpress.Web.ASPxGridView DetailGridview;
         
         /// <summary>
-        /// SqlDataSource2 control.
+        /// DetailDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.SqlDataSource DetailDS;
         
         /// <summary>
         /// AllocationDetailGridview control.
@@ -58,12 +58,12 @@ namespace simpleApp {
         protected global::DevExpress.Web.ASPxGridView AllocationDetailGridview;
         
         /// <summary>
-        /// SqlDataSource3 control.
+        /// AllocationDetailDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
+        protected global::System.Web.UI.WebControls.SqlDataSource AllocationDetailDS;
     }
 }
