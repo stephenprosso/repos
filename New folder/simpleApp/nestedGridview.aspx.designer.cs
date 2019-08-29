@@ -49,15 +49,6 @@ namespace simpleApp {
         protected global::System.Web.UI.WebControls.SqlDataSource DetailDS;
         
         /// <summary>
-        /// AllocationDetailGridview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView AllocationDetailGridview;
-        
-        /// <summary>
         /// AllocationDetailDS control.
         /// </summary>
         /// <remarks>
