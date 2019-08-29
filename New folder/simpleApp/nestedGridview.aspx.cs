@@ -20,10 +20,8 @@ namespace simpleApp
         protected void DetailGridview_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
         {
             DetailDS.SelectParameters["Order_Number"].DefaultValue = FocusedContainerID();
-            //AllocationDetailDS.SelectParameters["Container_ID"].DefaultValue = FocusedContainerDetailID();
+
             DetailGridview.DataBind();
-            //AllocationDetailGridview.FocusedRowIndex = -1;
-            //AllocationDetailGridview.DataBind();
         }
 
         private string FocusedContainerID()
@@ -37,37 +35,7 @@ namespace simpleApp
                 return "";
             }
         }
-        //private string FocusedContainerDetailID()
-        //{
-        //    if (DetailGridview.VisibleRowCount > 0 && DetailGridview.FocusedRowIndex > -1)
-        //    {
-        //        return DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, "Container_ID").ToString();
-        //    }
-        //    else
-        //    {
-        //        return "";
-        //    }
-        //}
-
-        //private string FocusedDetailOrderNumber()
-        //{
-        //    if (DetailGridview.VisibleRowCount > 0 && DetailGridview.FocusedRowIndex > -1)
-        //    {
-        //        return DetailGridview.GetRowValues(DetailGridview.FocusedRowIndex, "Order_Number").ToString();
-        //    }
-        //    else
-        //    {
-        //        return "";
-        //    }
-        //}
-
-        //protected void AllocationDetailGridview_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
-        //{
-        //    AllocationDetailDS.SelectParameters["Container_ID"].DefaultValue = FocusedContainerDetailID();
-        //    //AllocationDetailDS.SelectParameters["Order_Number"].DefaultValue = FocusedDetailOrderNumber();
-
-        //    AllocationDetailGridview.DataBind();
-        //}
+     
 
         protected void AllocationDetailGridview_BeforePerformDataSelect(object sender, EventArgs e)
         {
