@@ -15,6 +15,7 @@ namespace simpleApp
             DetailDS.SelectParameters["Order_Number"].DefaultValue = FocusedContainerID();
             DetailGridview.DataBind();
 
+
         }
 
         protected void DetailGridview_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)

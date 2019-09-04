@@ -136,6 +136,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="js\practicejs.js" />
+    <Content Include="nestedGridPractice.aspx" />
     <Content Include="nestedGridview.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="nestedGridPractice.aspx.cs">
+      <DependentUpon>nestedGridPractice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nestedGridPractice.aspx.designer.cs">
+      <DependentUpon>nestedGridPractice.aspx</DependentUpon>
     </Compile>
     <Compile Include="nestedGridview.aspx.cs">
       <DependentUpon>nestedGridview.aspx</DependentUpon>
